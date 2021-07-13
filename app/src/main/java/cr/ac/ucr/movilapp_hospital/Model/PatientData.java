@@ -33,6 +33,7 @@ public class PatientData {
     public void setCivil_status(String civil_status) { this.civil_status = civil_status; }
     public String getTelephone() { return telephone; }
     public void setTelephone(String telephone) { this.telephone = telephone; }
+    public PatientAddres getPatient_addres() { return patient_addres; }
 
     @Override
     public String toString() {

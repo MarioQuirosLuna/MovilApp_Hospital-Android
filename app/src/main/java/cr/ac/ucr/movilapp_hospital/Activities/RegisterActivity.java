@@ -12,7 +12,6 @@ import android.widget.Spinner;
 import cr.ac.ucr.movilapp_hospital.API.API_HospitalPatient;
 import cr.ac.ucr.movilapp_hospital.Model.PatientData;
 import cr.ac.ucr.movilapp_hospital.Model.PatientRegister;
-import cr.ac.ucr.movilapp_hospital.Model.PatientSession;
 import cr.ac.ucr.movilapp_hospital.Model.RetrofitSingleton;
 import cr.ac.ucr.movilapp_hospital.R;
 import retrofit2.Call;
@@ -46,19 +45,19 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        options_civil_state = (Spinner) findViewById(R.id.Combo_Civil_State);
-        txt_identification = (EditText) findViewById(R.id.Patient_Identification_Register);
-        txt_name = (EditText) findViewById(R.id.Patient_Name_Register);
-        txt_password = (EditText) findViewById(R.id.Patient_Password_Register);
-        txt_age = (EditText) findViewById(R.id.Patient_Age_Register);
-        txt_bloodType = (EditText) findViewById(R.id.Patient_Blood_type_Register);
-        txt_telephone = (EditText) findViewById(R.id.Patient_Telephone_Register);
-        txt_province = (EditText) findViewById(R.id.Patient_Province_Register);
+        options_civil_state = (Spinner) findViewById(R.id.Patient_Civil_State_Data);
+        txt_identification = (EditText) findViewById(R.id.Patient_Identification_Data);
+        txt_name = (EditText) findViewById(R.id.Patient_Name_Data);
+        txt_password = (EditText) findViewById(R.id.Patient_Password_Data);
+        txt_age = (EditText) findViewById(R.id.Patient_Age_Data);
+        txt_bloodType = (EditText) findViewById(R.id.Patient_Blood_type_Data);
+        txt_telephone = (EditText) findViewById(R.id.Patient_Telephone_Data);
+        txt_province = (EditText) findViewById(R.id.Patient_Address_Data);
         txt_canton = (EditText) findViewById(R.id.Patient_Canton_Register);
         txt_district = (EditText) findViewById(R.id.Patient_District_Register);
-        txt_otherSigns = (EditText) findViewById(R.id.Patient_Description_Register);
+        txt_otherSigns = (EditText) findViewById(R.id.Patient_Description_Data);
 
-        btn_register = (Button) findViewById(R.id.Register_Button_Register);
+        btn_register = (Button) findViewById(R.id.Update_Button_Data);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.options_civil_state, android.R.layout.simple_spinner_item);
         options_civil_state.setAdapter(adapter);

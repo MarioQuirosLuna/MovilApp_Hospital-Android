@@ -46,6 +46,7 @@ public class DashBoardActivity extends AppCompatActivity {
 
         btn_dataPatient.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), DataPatientActivity.class);
+            intent.putExtra("identification",session.getPatientIdentification());
             startActivity(intent);
         });
 

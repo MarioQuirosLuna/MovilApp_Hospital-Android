@@ -25,11 +25,6 @@ public class PatientAddres {
 
     @Override
     public String toString() {
-        return "PatientAddres{" +
-                "province='" + province + '\'' +
-                ", canton='" + canton + '\'' +
-                ", district='" + district + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return province +", "+ canton +", "+ district;
     }
 }
