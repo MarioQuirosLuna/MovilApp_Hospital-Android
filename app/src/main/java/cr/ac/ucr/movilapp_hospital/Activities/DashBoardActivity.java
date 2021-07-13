@@ -2,8 +2,11 @@ package cr.ac.ucr.movilapp_hospital.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import cr.ac.ucr.movilapp_hospital.Model.PatientSession;
@@ -16,6 +19,11 @@ public class DashBoardActivity extends AppCompatActivity {
     private TextView txt_Identification_Dashboard;
     private TextView txt_Name_Dashboard;
 
+    private ImageButton btn_dataPatient;
+    private ImageButton btn_appointmentPatient;
+    private ImageButton btn_allergyPatient;
+    private ImageButton btn_vaccinePatient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +32,10 @@ public class DashBoardActivity extends AppCompatActivity {
         txt_Identification_Dashboard = (TextView) findViewById(R.id.Patient_Identification_Dashboard);
         txt_Name_Dashboard = (TextView) findViewById(R.id.Patient_Name_Dashboard);
 
-
+        btn_dataPatient = (ImageButton) findViewById(R.id.show_Data_Patient);
+        btn_appointmentPatient = (ImageButton) findViewById(R.id.show_Appointment_Patient);
+        btn_allergyPatient = (ImageButton) findViewById(R.id.show_Allergy_Patient);
+        btn_vaccinePatient = (ImageButton) findViewById(R.id.show_Vaccine_Patient);
 
         Bundle extra = getIntent().getExtras();
         if(extra != null){
@@ -32,6 +43,12 @@ public class DashBoardActivity extends AppCompatActivity {
             txt_Identification_Dashboard.setText(String.valueOf(session.getPatientIdentification()));
             txt_Name_Dashboard.setText(session.getPatientName());
         }
+
+        btn_dataPatient.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), DataPatientActivity.class);
+            startActivity(intent);
+        });
+
 
     }
 }

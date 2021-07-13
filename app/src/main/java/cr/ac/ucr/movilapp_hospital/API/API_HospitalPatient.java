@@ -2,6 +2,7 @@ package cr.ac.ucr.movilapp_hospital.API;
 
 import cr.ac.ucr.movilapp_hospital.Model.PatientData;
 import cr.ac.ucr.movilapp_hospital.Model.PatientLogin;
+import cr.ac.ucr.movilapp_hospital.Model.PatientRegister;
 import cr.ac.ucr.movilapp_hospital.Model.PatientSession;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -17,4 +18,7 @@ public interface API_HospitalPatient {
 
     @POST("loginPatient")
     Call<PatientSession> loginPatient(@Body PatientLogin patientLogin);
+
+    @POST("createPatient")
+    Call<PatientData> addPatient(@Body PatientRegister patientRegister);
 }

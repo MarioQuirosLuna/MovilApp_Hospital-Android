@@ -13,4 +13,5 @@
     <string name="district_placeholder">District</string>
     <string name="user_name_placeholder">User Name</string>
     <string name="other_signs_placeholder">other signs</string>
+    <string name="update_placeholder">Update</string>
 </resources>

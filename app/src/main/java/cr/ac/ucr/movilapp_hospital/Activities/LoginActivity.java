@@ -43,19 +43,22 @@ public class LoginActivity extends AppCompatActivity {
 
             retrofit = RetrofitSingleton.getRetrofit();
 
-
-
             searchPatient(Integer.parseInt(txt_identification.getText().toString().trim()), String.valueOf(txt_password.getText().toString().trim()));
+        });
+
+        btnRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(),RegisterActivity.class);
+            startActivity(intent);
         });
 
     }
 
     private void searchPatient(int identification, String password){
 
-        API_HospitalPatient apiPokemon = retrofit.create(API_HospitalPatient.class);
+        API_HospitalPatient api = retrofit.create(API_HospitalPatient.class);
         PatientLogin patientLogin = new PatientLogin(identification, password);
 
-        Call<PatientSession> call = apiPokemon.loginPatient(patientLogin);
+        Call<PatientSession> call = api.loginPatient(patientLogin);
 
         call.enqueue(new Callback<PatientSession>() {
 

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DataPatientActivity">
+
+    <ImageView
+        android:id="@+id/Image_Register"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        tools:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/Patient_Identification_Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/identification_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/Image_Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/Patient_Name_Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/user_name_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Identification_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Identification_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Identification_Register" />
+
+    <TextView
+        android:id="@+id/Patient_Password_Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/password_placeholder"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Name_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Name_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Name_Register"/>
+
+    <TextView
+        android:id="@+id/Patient_Age_Register"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/age_placeholder"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/Patient_Blood_type_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Password_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Password_Register" />
+
+    <TextView
+        android:id="@+id/Patient_Blood_type_Register"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/blood_type_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Password_Register"
+        app:layout_constraintStart_toEndOf="@+id/Patient_Age_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Password_Register" />
+
+    <TextView
+        android:id="@+id/Combo_Civil_State"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/civil_state_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Age_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Age_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Blood_type_Register" />
+
+
+    <TextView
+        android:id="@+id/Patient_Telephone_Register"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/telephone_placeholder"
+        android:inputType="phone"
+        app:layout_constraintEnd_toStartOf="@+id/Patient_Province_Register"
+        app:layout_constraintStart_toStartOf="@+id/Combo_Civil_State"
+        app:layout_constraintTop_toBottomOf="@+id/Combo_Civil_State" />
+
+    <TextView
+        android:id="@+id/Patient_Province_Register"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/province_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Combo_Civil_State"
+        app:layout_constraintStart_toEndOf="@+id/Patient_Telephone_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Combo_Civil_State" />
+
+    <TextView
+        android:id="@+id/Patient_Canton_Register"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/canton_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/Patient_District_Register"
+        app:layout_constraintStart_toStartOf="@+id/Combo_Civil_State"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Telephone_Register" />
+
+    <TextView
+        android:id="@+id/Patient_District_Register"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/district_placeholder"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/Combo_Civil_State"
+        app:layout_constraintStart_toEndOf="@+id/Patient_Canton_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Province_Register" />
+
+    <TextView
+        android:id="@+id/Patient_Description_Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/other_signs_placeholder"
+        android:inputType="textLongMessage"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_District_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_District_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_District_Register"/>
+
+    <Button
+        android:id="@+id/Register_Button_Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_rounded_border"
+        android:text="@string/update_placeholder"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Description_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Description_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Description_Register"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
