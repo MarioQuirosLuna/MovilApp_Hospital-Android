@@ -14,6 +14,13 @@ public class PatientAddres {
 
     public PatientAddres(){}
 
+    public PatientAddres(String province, String canton, String district, String description) {
+        this.province = province;
+        this.canton = canton;
+        this.district = district;
+        this.description = description;
+    }
+
     public String getProvince() { return province; }
     public void setProvince(String province) { this.province = province; }
     public String getCanton() { return canton; }

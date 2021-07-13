@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
     private void searchPatient(int identification, String password){
 
         API_HospitalPatient api = retrofit.create(API_HospitalPatient.class);
+
         PatientLogin patientLogin = new PatientLogin(identification, password);
 
         Call<PatientSession> call = api.loginPatient(patientLogin);
@@ -72,7 +73,6 @@ public class LoginActivity extends AppCompatActivity {
                 PatientSession patient = response.body();
 
                 if(patient != null){
-                    Log.e(TAG, " onResponse: SI "+patient.toString());
                     Intent intent = new Intent(getApplicationContext(),DashBoardActivity.class);
                     intent.putExtra("identification", patient.getPatientIdentification());
                     intent.putExtra("name", patient.getPatientName());

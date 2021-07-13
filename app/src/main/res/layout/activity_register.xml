@@ -7,7 +7,7 @@
     tools:context=".Activities.RegisterActivity">
 
     <ImageView
-        android:id="@+id/Image_Data"
+        android:id="@+id/Image_Data_Register"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="24dp"
@@ -18,7 +18,7 @@
         tools:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <EditText
-        android:id="@+id/Patient_Identification_Data"
+        android:id="@+id/Patient_Identification_Data_Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -26,12 +26,12 @@
         android:layout_marginTop="24dp"
         android:hint="@string/identification_placeholder"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/Image_Data"
+        app:layout_constraintTop_toBottomOf="@+id/Image_Data_Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
-        android:id="@+id/Patient_Name_Data"
+        android:id="@+id/Patient_Name_Data_Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -39,12 +39,12 @@
         android:layout_marginTop="24dp"
         android:hint="@string/user_name_placeholder"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Identification_Data"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_Identification_Data"
-        app:layout_constraintStart_toStartOf="@+id/Patient_Identification_Data" />
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Identification_Data_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Identification_Data_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Identification_Data_Register" />
 
     <EditText
-        android:id="@+id/Patient_Password_Data"
+        android:id="@+id/Patient_Password_Data_Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -52,12 +52,12 @@
         android:layout_marginTop="24dp"
         android:hint="@string/password_placeholder"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Name_Data"
-        app:layout_constraintStart_toStartOf="@+id/Patient_Name_Data"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_Name_Data"/>
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Name_Data_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Name_Data_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Name_Data_Register"/>
 
     <EditText
-        android:id="@+id/Patient_Age_Data"
+        android:id="@+id/Patient_Age_Data_Register"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -65,12 +65,12 @@
         android:layout_marginEnd="16dp"
         android:hint="@string/age_placeholder"
         android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/Patient_Blood_type_Data"
-        app:layout_constraintStart_toStartOf="@+id/Patient_Password_Data"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Password_Data" />
+        app:layout_constraintEnd_toStartOf="@+id/Patient_Blood_type_Data_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Password_Data_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Password_Data_Register" />
 
     <EditText
-        android:id="@+id/Patient_Blood_type_Data"
+        android:id="@+id/Patient_Blood_type_Data_Register"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -78,25 +78,25 @@
         android:layout_marginEnd="32dp"
         android:hint="@string/blood_type_placeholder"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_Password_Data"
-        app:layout_constraintStart_toEndOf="@+id/Patient_Age_Data"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Password_Data" />
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Password_Data_Register"
+        app:layout_constraintStart_toEndOf="@+id/Patient_Age_Data_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Password_Data_Register" />
 
     <Spinner
-        android:id="@+id/Patient_Civil_State_Data"
+        android:id="@+id/Patient_Civil_State_Data_Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Age_Data"
-        app:layout_constraintStart_toStartOf="@+id/Patient_Age_Data"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_Blood_type_Data">
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Age_Data_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Age_Data_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Blood_type_Data_Register">
 
     </Spinner>
 
     <EditText
-        android:id="@+id/Patient_Telephone_Data"
+        android:id="@+id/Patient_Telephone_Data_Register"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -104,12 +104,12 @@
         android:layout_marginEnd="16dp"
         android:hint="@string/telephone_placeholder"
         android:inputType="phone"
-        app:layout_constraintEnd_toStartOf="@+id/Patient_Address_Data"
-        app:layout_constraintStart_toStartOf="@+id/Patient_Civil_State_Data"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Civil_State_Data" />
+        app:layout_constraintEnd_toStartOf="@+id/Patient_Address_Data_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Civil_State_Data_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Civil_State_Data_Register" />
 
     <EditText
-        android:id="@+id/Patient_Address_Data"
+        android:id="@+id/Patient_Address_Data_Register"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -117,12 +117,12 @@
         android:layout_marginEnd="32dp"
         android:hint="@string/province_placeholder"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_Civil_State_Data"
-        app:layout_constraintStart_toEndOf="@+id/Patient_Telephone_Data"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Civil_State_Data" />
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Civil_State_Data_Register"
+        app:layout_constraintStart_toEndOf="@+id/Patient_Telephone_Data_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Civil_State_Data_Register" />
 
     <EditText
-        android:id="@+id/Patient_Canton_Register"
+        android:id="@+id/Patient_Canton_Register_Register"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -130,12 +130,12 @@
         android:layout_marginEnd="16dp"
         android:hint="@string/canton_placeholder"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/Patient_District_Register"
-        app:layout_constraintStart_toStartOf="@+id/Patient_Civil_State_Data"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Telephone_Data" />
+        app:layout_constraintEnd_toStartOf="@+id/Patient_District_Register_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Civil_State_Data_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Telephone_Data_Register" />
 
     <EditText
-        android:id="@+id/Patient_District_Register"
+        android:id="@+id/Patient_District_Register_Register"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -143,12 +143,12 @@
         android:layout_marginEnd="32dp"
         android:hint="@string/district_placeholder"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_Civil_State_Data"
-        app:layout_constraintStart_toEndOf="@+id/Patient_Canton_Register"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Address_Data" />
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Civil_State_Data_Register"
+        app:layout_constraintStart_toEndOf="@+id/Patient_Canton_Register_Register"
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Address_Data_Register" />
 
     <EditText
-        android:id="@+id/Patient_Description_Data"
+        android:id="@+id/Patient_Description_Data_Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -156,12 +156,12 @@
         android:layout_marginTop="24dp"
         android:hint="@string/other_signs_placeholder"
         android:inputType="textLongMessage"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_District_Register"
-        app:layout_constraintStart_toStartOf="@+id/Patient_District_Register"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_District_Register"/>
+        app:layout_constraintTop_toBottomOf="@+id/Patient_District_Register_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_District_Register_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_District_Register_Register"/>
 
     <Button
-        android:id="@+id/Update_Button_Data"
+        android:id="@+id/Update_Button_Data_Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -169,9 +169,9 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_rounded_border"
         android:text="@string/registerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/Patient_Description_Data"
-        app:layout_constraintStart_toStartOf="@+id/Patient_Description_Data"
-        app:layout_constraintEnd_toEndOf="@+id/Patient_Description_Data"/>
+        app:layout_constraintTop_toBottomOf="@+id/Patient_Description_Data_Register"
+        app:layout_constraintStart_toStartOf="@+id/Patient_Description_Data_Register"
+        app:layout_constraintEnd_toEndOf="@+id/Patient_Description_Data_Register"/>
 
 
 

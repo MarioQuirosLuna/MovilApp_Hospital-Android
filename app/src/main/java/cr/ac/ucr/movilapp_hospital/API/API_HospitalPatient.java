@@ -4,11 +4,13 @@ import cr.ac.ucr.movilapp_hospital.Model.PatientData;
 import cr.ac.ucr.movilapp_hospital.Model.PatientLogin;
 import cr.ac.ucr.movilapp_hospital.Model.PatientRegister;
 import cr.ac.ucr.movilapp_hospital.Model.PatientSession;
+import cr.ac.ucr.movilapp_hospital.Model.PatientUpdate;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -21,4 +23,7 @@ public interface API_HospitalPatient {
 
     @POST("createPatient")
     Call<PatientData> addPatient(@Body PatientRegister patientRegister);
+
+    @PUT("updatePatient")
+    Call<PatientUpdate> updatePatient(@Body PatientUpdate patientUpdate);
 }

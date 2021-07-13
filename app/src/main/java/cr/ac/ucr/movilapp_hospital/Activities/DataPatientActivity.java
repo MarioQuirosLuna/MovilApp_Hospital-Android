@@ -2,12 +2,11 @@ package cr.ac.ucr.movilapp_hospital.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import cr.ac.ucr.movilapp_hospital.API.API_HospitalPatient;
 import cr.ac.ucr.movilapp_hospital.Model.PatientData;
@@ -23,6 +22,7 @@ public class DataPatientActivity extends AppCompatActivity {
     private static final String TAG = "PATIENT_APP";
 
     private Retrofit retrofit;
+    private PatientData patientData;
 
     private TextView identification;
     private TextView name;
@@ -49,16 +49,24 @@ public class DataPatientActivity extends AppCompatActivity {
         address = (TextView) findViewById(R.id.Patient_Address_Data);
         otherSigns = (TextView) findViewById(R.id.Patient_Description_Data);
 
+        btnUpdate = (Button) findViewById(R.id.Update_Button_Data);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         Bundle extra = getIntent().getExtras();
         if(extra != null){
             retrofit = RetrofitSingleton.getRetrofit();
 
             show(extra.getInt("identification"));
         }
-
     }
 
     private void show(int id){
+
         API_HospitalPatient api = retrofit.create(API_HospitalPatient.class);
 
         Call<PatientData> call = api.getPatientData(id);
@@ -71,9 +79,14 @@ public class DataPatientActivity extends AppCompatActivity {
                     return;
                 }
 
-                PatientData patientData = response.body();
-                Log.i(TAG, " onResponse: "+patientData.toString());
+                patientData = response.body();
 
+                showDataPatientOnScreen();
+                addEventUpdateBtn();
+
+            }
+
+            private void showDataPatientOnScreen(){
                 identification.setText(String.valueOf(patientData.getPatient_identification()));
                 name.setText(patientData.getPatient_name());
                 age.setText(String.valueOf(patientData.getAge()));
@@ -82,7 +95,22 @@ public class DataPatientActivity extends AppCompatActivity {
                 telephone.setText(patientData.getTelephone());
                 address.setText(patientData.getPatient_addres().toString());
                 otherSigns.setText(patientData.getPatient_addres().getDescription());
+            }
 
+            private void addEventUpdateBtn() {
+                if(patientData != null){
+                    btnUpdate.setOnClickListener(v -> {
+                        Intent intent = new Intent(getApplicationContext(),UpdatePatientActivity.class);
+                        intent.putExtra("identification", identification.getText());
+                        intent.putExtra("name", name.getText());
+                        intent.putExtra("telephone", telephone.getText());
+                        intent.putExtra("province", patientData.getPatient_addres().getProvince());
+                        intent.putExtra("canton", patientData.getPatient_addres().getCanton());
+                        intent.putExtra("district", patientData.getPatient_addres().getDistrict());
+                        intent.putExtra("description", patientData.getPatient_addres().getDescription());
+                        startActivity(intent);
+                    });
+                }
             }
 
             @Override
@@ -91,4 +119,5 @@ public class DataPatientActivity extends AppCompatActivity {
             }
         });
     }
+
 }

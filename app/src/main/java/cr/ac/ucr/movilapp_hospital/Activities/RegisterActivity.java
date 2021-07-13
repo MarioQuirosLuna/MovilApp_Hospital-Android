@@ -45,19 +45,19 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        options_civil_state = (Spinner) findViewById(R.id.Patient_Civil_State_Data);
-        txt_identification = (EditText) findViewById(R.id.Patient_Identification_Data);
-        txt_name = (EditText) findViewById(R.id.Patient_Name_Data);
-        txt_password = (EditText) findViewById(R.id.Patient_Password_Data);
-        txt_age = (EditText) findViewById(R.id.Patient_Age_Data);
-        txt_bloodType = (EditText) findViewById(R.id.Patient_Blood_type_Data);
-        txt_telephone = (EditText) findViewById(R.id.Patient_Telephone_Data);
-        txt_province = (EditText) findViewById(R.id.Patient_Address_Data);
-        txt_canton = (EditText) findViewById(R.id.Patient_Canton_Register);
-        txt_district = (EditText) findViewById(R.id.Patient_District_Register);
-        txt_otherSigns = (EditText) findViewById(R.id.Patient_Description_Data);
+        options_civil_state = (Spinner) findViewById(R.id.Patient_Civil_State_Data_Register);
+        txt_identification = (EditText) findViewById(R.id.Patient_Identification_Data_Register);
+        txt_name = (EditText) findViewById(R.id.Patient_Name_Data_Register);
+        txt_password = (EditText) findViewById(R.id.Patient_Password_Data_Register);
+        txt_age = (EditText) findViewById(R.id.Patient_Age_Data_Register);
+        txt_bloodType = (EditText) findViewById(R.id.Patient_Blood_type_Data_Register);
+        txt_telephone = (EditText) findViewById(R.id.Patient_Telephone_Data_Register);
+        txt_province = (EditText) findViewById(R.id.Patient_Address_Data_Register);
+        txt_canton = (EditText) findViewById(R.id.Patient_Canton_Register_Register);
+        txt_district = (EditText) findViewById(R.id.Patient_District_Register_Register);
+        txt_otherSigns = (EditText) findViewById(R.id.Patient_Description_Data_Register);
 
-        btn_register = (Button) findViewById(R.id.Update_Button_Data);
+        btn_register = (Button) findViewById(R.id.Update_Button_Data_Register);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.options_civil_state, android.R.layout.simple_spinner_item);
         options_civil_state.setAdapter(adapter);
@@ -100,7 +100,6 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if(patientData != null){
                     Log.e(TAG, " onResponse: "+patientData.toString());
-                    Log.e(TAG, " onResponse2: "+patientData.patient_addres.getProvince());
                     onBackPressed();
                 }
             }
