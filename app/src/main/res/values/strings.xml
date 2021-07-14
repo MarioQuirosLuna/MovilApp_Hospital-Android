@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovilApp_Hospital</string>
+    <string name="app_name">Hospital_MovilApp</string>
     <string name="identification_placeholder">Identification</string>
     <string name="password_placeholder">Password</string>
     <string name="loginBtn">LogIn</string>

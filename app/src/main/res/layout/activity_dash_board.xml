@@ -14,8 +14,8 @@
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/sym_def_app_icon"
-        tools:srcCompat="@android:drawable/sym_def_app_icon"  />
+        app:srcCompat="@drawable/ic_user"
+        tools:srcCompat="@drawable/ic_user"  />
 
     <TextView
         android:id="@+id/Patient_Identification_Dashboard"
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:textSize="18dp"
         android:text="@string/identification_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ImageDefault"
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:textSize="18dp"
         android:text="@string/user_name_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ImageDefault"
@@ -49,7 +51,7 @@
         app:layout_constraintEnd_toStartOf="@+id/show_Appointment_Patient"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ImageDefault"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+        app:srcCompat="@drawable/ic_user_data" />
 
     <ImageButton
         android:id="@+id/show_Appointment_Patient"
@@ -61,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/show_Data_Patient"
         app:layout_constraintTop_toBottomOf="@+id/ImageDefault"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+        app:srcCompat="@drawable/ic_appointment" />
 
     <ImageButton
         android:id="@+id/show_Allergy_Patient"
@@ -74,7 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/show_Vaccine_Patient"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_view" />
+        app:srcCompat="@drawable/ic_allergy" />
 
     <ImageButton
         android:id="@+id/show_Vaccine_Patient"
@@ -87,5 +89,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/show_Allergy_Patient"
-        app:srcCompat="?attr/actionModePasteDrawable" />
+        app:srcCompat="@drawable/ic_vaccine" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
