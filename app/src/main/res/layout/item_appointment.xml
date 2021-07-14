@@ -8,6 +8,19 @@
     android:id="@+id/layout_eventPress_item">
 
     <TextView
+        android:id="@+id/id_appointment_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/id_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
         android:id="@+id/clinic_name_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

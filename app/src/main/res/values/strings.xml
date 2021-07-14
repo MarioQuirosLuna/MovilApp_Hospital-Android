@@ -17,4 +17,9 @@
     <string name="address_placeholder">Address</string>
     <string name="clinic_name_placeholder">Clinic name</string>
     <string name="date_time_placeholder">Date time</string>
+    <string name="doctor_code_placeholder">Doctor code</string>
+    <string name="doctor_name_placeholder">Doctor name</string>
+    <string name="speciality_placeholder">Speciality</string>
+    <string name="diagnosis_placeholder">Diagnosis</string>
+    <string name="id_placeholder">Id</string>
 </resources>
