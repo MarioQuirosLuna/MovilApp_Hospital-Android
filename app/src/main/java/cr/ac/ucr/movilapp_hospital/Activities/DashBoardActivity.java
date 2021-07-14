@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -13,6 +14,8 @@ import cr.ac.ucr.movilapp_hospital.Model.PatientSession;
 import cr.ac.ucr.movilapp_hospital.R;
 
 public class DashBoardActivity extends AppCompatActivity {
+
+    private static final String TAG = "PATIENT_APP";
 
     PatientSession session;
 
@@ -50,6 +53,11 @@ public class DashBoardActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-
+        btn_appointmentPatient.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ShowAppointmentsActivity.class);
+            intent.putExtra("identification", String.valueOf(session.getPatientIdentification()));
+            intent.putExtra("name", session.getPatientName());
+            startActivity(intent);
+        });
     }
 }

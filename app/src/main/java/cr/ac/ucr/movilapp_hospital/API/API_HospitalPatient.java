@@ -1,5 +1,8 @@
 package cr.ac.ucr.movilapp_hospital.API;
 
+import java.util.List;
+
+import cr.ac.ucr.movilapp_hospital.Model.AppointmentData;
 import cr.ac.ucr.movilapp_hospital.Model.PatientData;
 import cr.ac.ucr.movilapp_hospital.Model.PatientLogin;
 import cr.ac.ucr.movilapp_hospital.Model.PatientRegister;
@@ -18,6 +21,9 @@ public interface API_HospitalPatient {
     @GET("showDataPatient")
     Call<PatientData> getPatientData(@Query("identification") int identification);
 
+    @GET("showAppointmentPatient")
+    Call<List<AppointmentData>> getAppointments(@Query("identification") int identification);
+
     @POST("loginPatient")
     Call<PatientSession> loginPatient(@Body PatientLogin patientLogin);
 
@@ -26,4 +32,5 @@ public interface API_HospitalPatient {
 
     @PUT("updatePatient")
     Call<PatientUpdate> updatePatient(@Body PatientUpdate patientUpdate);
+
 }

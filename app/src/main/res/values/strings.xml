@@ -15,4 +15,6 @@
     <string name="other_signs_placeholder">other signs</string>
     <string name="update_placeholder">Update</string>
     <string name="address_placeholder">Address</string>
+    <string name="clinic_name_placeholder">Clinic name</string>
+    <string name="date_time_placeholder">Date time</string>
 </resources>
