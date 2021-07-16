@@ -66,5 +66,12 @@ public class DashBoardActivity extends AppCompatActivity {
             intent.putExtra("name", session.getPatientName());
             startActivity(intent);
         });
+
+        btn_vaccinePatient.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ShowVaccineActivity.class);
+            intent.putExtra("identification", String.valueOf(session.getPatientIdentification()));
+            intent.putExtra("name", session.getPatientName());
+            startActivity(intent);
+        });
     }
 }

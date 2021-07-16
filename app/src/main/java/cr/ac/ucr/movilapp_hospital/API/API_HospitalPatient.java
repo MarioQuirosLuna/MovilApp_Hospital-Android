@@ -9,6 +9,7 @@ import cr.ac.ucr.movilapp_hospital.Model.PatientLogin;
 import cr.ac.ucr.movilapp_hospital.Model.PatientRegister;
 import cr.ac.ucr.movilapp_hospital.Model.PatientSession;
 import cr.ac.ucr.movilapp_hospital.Model.PatientUpdate;
+import cr.ac.ucr.movilapp_hospital.Model.VaccineData;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -27,6 +28,9 @@ public interface API_HospitalPatient {
 
     @GET("showAllergyPatient")
     Call<List<AllergyData>> getAllergies(@Query("identification") int identification);
+
+    @GET("showVaccinePatient")
+    Call<List<VaccineData>> getVaccines(@Query("identification") int identification);
 
     @POST("loginPatient")
     Call<PatientSession> loginPatient(@Body PatientLogin patientLogin);
