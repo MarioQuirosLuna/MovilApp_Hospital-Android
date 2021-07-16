@@ -22,4 +22,7 @@
     <string name="speciality_placeholder">Speciality</string>
     <string name="diagnosis_placeholder">Diagnosis</string>
     <string name="id_placeholder">Id</string>
+    <string name="allergy_name_placeholder">Allergy name</string>
+    <string name="allergy_description_placeholder">Allergy description</string>
+    <string name="medicine_placeholder">Medicine</string>
 </resources>

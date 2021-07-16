@@ -2,6 +2,7 @@ package cr.ac.ucr.movilapp_hospital.API;
 
 import java.util.List;
 
+import cr.ac.ucr.movilapp_hospital.Model.AllergyData;
 import cr.ac.ucr.movilapp_hospital.Model.AppointmentData;
 import cr.ac.ucr.movilapp_hospital.Model.PatientData;
 import cr.ac.ucr.movilapp_hospital.Model.PatientLogin;
@@ -23,6 +24,9 @@ public interface API_HospitalPatient {
 
     @GET("showAppointmentPatient")
     Call<List<AppointmentData>> getAppointments(@Query("identification") int identification);
+
+    @GET("showAllergyPatient")
+    Call<List<AllergyData>> getAllergies(@Query("identification") int identification);
 
     @POST("loginPatient")
     Call<PatientSession> loginPatient(@Body PatientLogin patientLogin);

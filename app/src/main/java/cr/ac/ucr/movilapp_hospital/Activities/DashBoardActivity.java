@@ -59,5 +59,12 @@ public class DashBoardActivity extends AppCompatActivity {
             intent.putExtra("name", session.getPatientName());
             startActivity(intent);
         });
+
+        btn_allergyPatient.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ShowAllergyActivity.class);
+            intent.putExtra("identification", String.valueOf(session.getPatientIdentification()));
+            intent.putExtra("name", session.getPatientName());
+            startActivity(intent);
+        });
     }
 }

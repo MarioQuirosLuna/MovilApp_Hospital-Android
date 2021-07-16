@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_eventPress_item">
+    android:id="@+id/layout_eventPress_itemAllergy">
 
     <TextView
-        android:id="@+id/id_appointment_item"
+        android:id="@+id/id_allergy_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -21,13 +21,13 @@
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/clinic_name_item"
-        android:layout_width="100dp"
+        android:id="@+id/allergy_name_item"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:hint="@string/clinic_name_placeholder"
+        android:hint="@string/allergy_name_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/date_time_item"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
 
     <TextView
         android:id="@+id/date_time_item"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -43,8 +43,7 @@
         android:hint="@string/date_time_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/clinic_name_item"
+        app:layout_constraintStart_toEndOf="@+id/allergy_name_item"
         app:layout_constraintTop_toTopOf="parent" />
 
-    
 </androidx.constraintlayout.widget.ConstraintLayout>
