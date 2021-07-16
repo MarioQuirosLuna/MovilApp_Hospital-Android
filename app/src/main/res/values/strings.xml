@@ -26,4 +26,6 @@
     <string name="allergy_description_placeholder">Allergy description</string>
     <string name="medicine_placeholder">Medicine</string>
     <string name="vaccine_name_placeholder">Vaccine name</string>
+    <string name="vaccine_description_placeholder">Vaccine description</string>
+    <string name="next_datetime_placeholder">Next DateTime</string>
 </resources>

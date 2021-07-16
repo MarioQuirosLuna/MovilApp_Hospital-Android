@@ -27,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:hint="@string/allergy_name_placeholder"
+        android:hint="@string/vaccine_name_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/date_time_item"
         app:layout_constraintStart_toStartOf="parent"

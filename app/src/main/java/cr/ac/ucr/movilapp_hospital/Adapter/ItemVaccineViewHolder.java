@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import cr.ac.ucr.movilapp_hospital.Activities.DetailsAllergyActivity;
+import cr.ac.ucr.movilapp_hospital.Activities.DetailsVaccineActivity;
 import cr.ac.ucr.movilapp_hospital.Model.AllergyData;
 import cr.ac.ucr.movilapp_hospital.Model.VaccineData;
 import cr.ac.ucr.movilapp_hospital.R;
@@ -41,14 +42,14 @@ public class ItemVaccineViewHolder extends RecyclerView.ViewHolder implements Vi
 
     @Override
     public void onClick(View v) {
-//        Intent intent = new Intent(v.getContext(), DetailsAllergyActivity.class);
-//        intent.putExtra("identification", String.valueOf(this.vaccineData.getPatientIdentification()));
-//        intent.putExtra("name", this.vaccineData.getPatientName());
-//        intent.putExtra("vaccineName", String.valueOf(this.vaccineData.getVaccineName()));
-//        intent.putExtra("vaccineDescription", this.vaccineData.getVaccineDescription());
-//        intent.putExtra("dateTime", this.vaccineData.getDateTime());
-//        intent.putExtra("nextDoseDateTime", this.vaccineData.getNextDoseDateTime());
-//        intent.putExtra("clinicName", this.vaccineData.getClinicName());
-//        v.getContext().startActivity(intent);
+        Intent intent = new Intent(v.getContext(), DetailsVaccineActivity.class);
+        intent.putExtra("identification", String.valueOf(this.vaccineData.getPatientIdentification()));
+        intent.putExtra("name", this.vaccineData.getPatientName());
+        intent.putExtra("vaccineName", String.valueOf(this.vaccineData.getVaccineName()));
+        intent.putExtra("vaccineDescription", this.vaccineData.getVaccineDescription());
+        intent.putExtra("dateTime", this.vaccineData.getDateTime());
+        intent.putExtra("nextDoseDateTime", this.vaccineData.getNextDoseDateTime());
+        intent.putExtra("clinicName", this.vaccineData.getClinicName());
+        v.getContext().startActivity(intent);
    }
 }

@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.ShowVaccineActivity"></activity>
+        <activity android:name=".Activities.DetailsVaccineActivity"></activity>
+        <activity android:name=".Activities.ShowVaccineActivity" />
         <activity android:name=".Activities.DetailsAllergyActivity" />
         <activity android:name=".Activities.ShowAllergyActivity" />
         <activity android:name=".Activities.DetailsAppointmentActivity" />
