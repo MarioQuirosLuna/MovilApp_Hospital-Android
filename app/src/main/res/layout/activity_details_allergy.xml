@@ -5,18 +5,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backcream"
     tools:context=".Activities.DetailsAllergyActivity">
 
-    <ImageView
-        android:id="@+id/Image_Details_Allergy"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="24dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cornflower"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/sym_def_app_icon"
-        tools:srcCompat="@android:drawable/sym_def_app_icon" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Image_Details_Allergy"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_allergy"
+            tools:srcCompat="@drawable/ic_allergy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/Patient_label_Identification_Details_Allergy"
@@ -26,7 +40,8 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="24dp"
         android:text="@string/identification_placeholder"
-        app:layout_constraintTop_toBottomOf="@+id/Image_Details_Allergy"
+        android:textColor="@color/cornflower"
+        app:layout_constraintTop_toBottomOf="@+id/Introduction"
         app:layout_constraintEnd_toStartOf="@+id/Patient_Identification_Details_Allergy"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -38,7 +53,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="24dp"
         android:hint="@string/identification_placeholder"
-        app:layout_constraintTop_toBottomOf="@+id/Image_Details_Allergy"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/Introduction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Patient_label_Identification_Details_Allergy"/>
 
@@ -50,6 +67,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="@string/user_name_placeholder"
+        android:textColor="@color/cornflower"
         app:layout_constraintEnd_toStartOf="@+id/Patient_Name_Details_Allergy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Patient_label_Identification_Details_Allergy" />
@@ -62,6 +80,8 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="24dp"
         android:hint="@string/user_name_placeholder"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/Patient_Identification_Details_Allergy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Patient_label_Name_Details_Allergy" />
@@ -74,6 +94,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="@string/allergy_name_placeholder"
+        android:textColor="@color/cornflower"
         app:layout_constraintEnd_toStartOf="@+id/Patient_AllergyName_Details_Allergy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Patient_label_Name_Details_Allergy" />
@@ -86,6 +107,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/allergy_name_placeholder"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Patient_label_AllergyName_Details_Allergy"
         app:layout_constraintTop_toBottomOf="@+id/Patient_Name_Details_Allergy" />
@@ -98,6 +121,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="@string/date_time_placeholder"
+        android:textColor="@color/cornflower"
         app:layout_constraintEnd_toStartOf="@+id/Patient_DateTime_Details_Allergy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Patient_label_AllergyName_Details_Allergy" />
@@ -110,6 +134,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/date_time_placeholder"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Patient_label_DateTime_Details_Allergy"
         app:layout_constraintTop_toBottomOf="@+id/Patient_AllergyName_Details_Allergy" />
@@ -122,6 +148,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="@string/medicine_placeholder"
+        android:textColor="@color/cornflower"
         app:layout_constraintEnd_toStartOf="@+id/Patient_Medicine_Details_Allergy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Patient_label_DateTime_Details_Allergy" />
@@ -134,6 +161,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/medicine_placeholder"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Patient_label_Medicine_Details_Allergy"
         app:layout_constraintTop_toBottomOf="@+id/Patient_DateTime_Details_Allergy" />
@@ -146,6 +175,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:text="@string/allergy_description_placeholder"
+        android:textColor="@color/cornflower"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Patient_label_Medicine_Details_Allergy" />
@@ -158,6 +188,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/allergy_description_placeholder"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Patient_label_AllergyDescription_Details_Allergy" />

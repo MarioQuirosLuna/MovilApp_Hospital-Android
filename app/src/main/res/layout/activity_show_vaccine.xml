@@ -4,18 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backcream"
     tools:context=".Activities.ShowVaccineActivity">
 
-    <ImageView
-        android:id="@+id/Image_Vaccine"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="24dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cornflower"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/sym_def_app_icon"
-        tools:srcCompat="@android:drawable/sym_def_app_icon" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Image_Vaccine"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_vaccine"
+            tools:srcCompat="@drawable/ic_vaccine" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/Patient_Identification_label_Vaccine"
@@ -25,10 +39,11 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="@string/identification_placeholder"
+        android:textColor="@color/cornflower"
         android:textSize="18dp"
         app:layout_constraintEnd_toStartOf="@+id/Patient_Identification_Vaccine"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Image_Vaccine" />
+        app:layout_constraintTop_toBottomOf="@+id/Introduction" />
 
     <TextView
         android:id="@+id/Patient_Identification_Vaccine"
@@ -39,9 +54,11 @@
         android:layout_marginEnd="32dp"
         android:hint="@string/identification_placeholder"
         android:textSize="18dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Patient_Identification_label_Vaccine"
-        app:layout_constraintTop_toBottomOf="@+id/Image_Vaccine" />
+        app:layout_constraintTop_toBottomOf="@+id/Introduction" />
 
     <TextView
         android:id="@+id/Patient_Name_label_Vaccine"
@@ -51,6 +68,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="@string/user_name_placeholder"
+        android:textColor="@color/cornflower"
         android:textSize="18dp"
         app:layout_constraintEnd_toStartOf="@+id/Patient_Name_Vaccine"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,6 +83,8 @@
         android:layout_marginEnd="32dp"
         android:hint="@string/user_name_placeholder"
         android:textSize="18dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Patient_Name_label_Vaccine"
         app:layout_constraintTop_toBottomOf="@+id/Patient_Identification_Vaccine" />
@@ -77,6 +97,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="8dp"
         android:text="@string/vaccine_name_placeholder"
+        android:textColor="@color/cornflower"
         app:layout_constraintEnd_toStartOf="@+id/vaccine_name_item"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Patient_Name_label_Vaccine" />
@@ -89,6 +110,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:text="@string/date_time_placeholder"
+        android:textColor="@color/cornflower"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/vaccine_name_item_label"
         app:layout_constraintTop_toBottomOf="@+id/Patient_Name_Vaccine" />
@@ -100,6 +122,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@color/backcream"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vaccine_name_item_label" />

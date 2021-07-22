@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/backcream"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout_eventPress_itemVaccine">
 
@@ -28,6 +29,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:hint="@string/vaccine_name_placeholder"
+        android:background="@color/backcream"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/date_time_item"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +45,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:hint="@string/date_time_placeholder"
+        android:background="@color/backcream"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/vaccine_name_item"
