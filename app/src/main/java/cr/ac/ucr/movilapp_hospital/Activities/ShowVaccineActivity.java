@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -34,11 +35,14 @@ public class ShowVaccineActivity extends AppCompatActivity {
     private TextView txt_name;
 
     private RecyclerView reciclerView;
+    private TextView textNotData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_vaccine);
+
+        textNotData = (TextView) findViewById(R.id.recycler_empty_vaccine);
 
         txt_identification = (TextView) findViewById(R.id.Patient_Identification_Vaccine);
         txt_name = (TextView) findViewById(R.id.Patient_Name_Vaccine);
@@ -78,7 +82,10 @@ public class ShowVaccineActivity extends AppCompatActivity {
 
                 List<VaccineData> list = response.body();
 
-                vaccineListAdapter.addListVaccine(list);
+                if(!list.isEmpty()){
+                    vaccineListAdapter.addListVaccine(list);
+                }
+                showNotData(list.isEmpty());
             }
 
             @Override
@@ -87,6 +94,16 @@ public class ShowVaccineActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void showNotData(boolean isEmpty){
+        if(isEmpty){
+            textNotData.setVisibility(View.VISIBLE);
+            reciclerView.setVisibility(View.INVISIBLE);
+        }else{
+            textNotData.setVisibility(View.INVISIBLE);
+            reciclerView.setVisibility(View.VISIBLE);
+        }
     }
 
 }

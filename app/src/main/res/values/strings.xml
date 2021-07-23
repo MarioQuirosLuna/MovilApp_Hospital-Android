@@ -28,4 +28,10 @@
     <string name="vaccine_name_placeholder">Vaccine name</string>
     <string name="vaccine_description_placeholder">Vaccine description</string>
     <string name="next_datetime_placeholder">Next DateTime</string>
+    <string name="identification_required">Identification required*</string>
+    <string name="password_required">Password required*</string>
+    <string name="input_required">Required*</string>
+    <string name="identification_incorrect">Identification incorrect*</string>
+    <string name="password_incorrect">Password incorrect*</string>
+    <string name="no_data_placeholder">No data</string>
 </resources>

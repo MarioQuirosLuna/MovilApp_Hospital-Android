@@ -8,6 +8,22 @@
     android:background="@color/backcream"
     tools:context=".Activities.RegisterActivity">
 
+    <ProgressBar
+        android:id="@+id/progressAnimationRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/custom_progress"
+        android:background="@color/cornflower"
+        android:padding="5dp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <ImageView
         android:id="@+id/Image_Data_Register"
         android:layout_width="64dp"
@@ -158,6 +174,7 @@
         android:hint="@string/canton_placeholder"
         android:backgroundTint="@color/cornflower"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         android:textColorHint="?attr/colorBackgroundFloating"
         app:layout_constraintEnd_toStartOf="@+id/Patient_District_Register_Register"
         app:layout_constraintStart_toStartOf="@+id/Patient_Civil_State_Data_Register"

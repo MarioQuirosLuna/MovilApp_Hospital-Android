@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 
 import cr.ac.ucr.movilapp_hospital.API.API_HospitalPatient;
@@ -24,6 +26,8 @@ public class RegisterActivity extends AppCompatActivity {
     private static final String TAG = "PATIENT_APP";
 
     private Retrofit retrofit;
+
+    private ProgressBar progress;
 
     private Spinner options_civil_state;
 
@@ -45,6 +49,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        progress = (ProgressBar) findViewById(R.id.progressAnimationRegister);
+
         options_civil_state = (Spinner) findViewById(R.id.Patient_Civil_State_Data_Register);
         txt_identification = (EditText) findViewById(R.id.Patient_Identification_Data_Register);
         txt_name = (EditText) findViewById(R.id.Patient_Name_Data_Register);
@@ -63,22 +69,27 @@ public class RegisterActivity extends AppCompatActivity {
         options_civil_state.setAdapter(adapter);
 
         btn_register.setOnClickListener(v -> {
-            retrofit = RetrofitSingleton.getRetrofit();
-            registerPacient(
-                    new PatientRegister(
-                            Integer.parseInt(txt_identification.getText().toString().trim()),
-                            txt_name.getText().toString().trim(),
-                            txt_password.getText().toString().trim(),
-                            Integer.parseInt(txt_age.getText().toString().trim()),
-                            txt_bloodType.getText().toString().trim(),
-                            options_civil_state.getSelectedItem().toString(),
-                            txt_telephone.getText().toString().trim(),
-                            txt_province.getText().toString().trim(),
-                            txt_canton.getText().toString().trim(),
-                            txt_district.getText().toString().trim(),
-                            txt_otherSigns.getText().toString().trim()
-                    )
-            );
+            progress.setVisibility(View.VISIBLE);
+
+            if(input_Validations()){
+                retrofit = RetrofitSingleton.getRetrofit();
+                registerPacient(
+                        new PatientRegister(
+                                Integer.parseInt(txt_identification.getText().toString().trim()),
+                                txt_name.getText().toString().trim(),
+                                txt_password.getText().toString().trim(),
+                                Integer.parseInt(txt_age.getText().toString().trim()),
+                                txt_bloodType.getText().toString().trim(),
+                                options_civil_state.getSelectedItem().toString(),
+                                txt_telephone.getText().toString().trim(),
+                                txt_province.getText().toString().trim(),
+                                txt_canton.getText().toString().trim(),
+                                txt_district.getText().toString().trim(),
+                                txt_otherSigns.getText().toString().trim()
+                        )
+                );
+            }
+
         });
     }
 
@@ -109,5 +120,59 @@ public class RegisterActivity extends AppCompatActivity {
                 Log.e(TAG, " onFailure: "+t.getMessage());
             }
         });
+    }
+
+    private boolean input_Validations(){
+        if(txt_identification.getText().toString().equals("")){
+            txt_identification.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_name.getText().toString().equals("")){
+            txt_name.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_password.getText().toString().equals("")){
+            txt_password.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_age.getText().toString().equals("")){
+            txt_age.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_bloodType.getText().toString().equals("")){
+            txt_bloodType.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_telephone.getText().toString().equals("")){
+            txt_telephone.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_province.getText().toString().equals("")){
+            txt_province.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_canton.getText().toString().equals("")){
+            txt_canton.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_district.getText().toString().equals("")){
+            txt_district.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        if(txt_otherSigns.getText().toString().equals("")){
+            txt_otherSigns.setError(getString(R.string.input_required));
+            progress.setVisibility(View.INVISIBLE);
+            return false;
+        }
+        return true;
     }
 }

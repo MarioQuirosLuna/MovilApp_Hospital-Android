@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -34,11 +35,14 @@ public class ShowAppointmentsActivity extends AppCompatActivity {
     private TextView txt_name;
 
     private RecyclerView reciclerView;
+    private TextView textNotData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_appointments);
+
+        textNotData = (TextView) findViewById(R.id.recycler_empty_appointment);
 
         txt_identification = (TextView) findViewById(R.id.Patient_Identification_Appointment_a);
         txt_name = (TextView) findViewById(R.id.Patient_Name_Appointment);
@@ -77,7 +81,11 @@ public class ShowAppointmentsActivity extends AppCompatActivity {
 
                 List<AppointmentData> list = response.body();
 
-                appointmentListAdapter.addListAppointment(list);
+                if(!list.isEmpty()){
+                    appointmentListAdapter.addListAppointment(list);
+                }
+                showNotData(list.isEmpty());
+
             }
 
             @Override
@@ -86,6 +94,16 @@ public class ShowAppointmentsActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void showNotData(boolean isEmpty){
+        if(isEmpty){
+            textNotData.setVisibility(View.VISIBLE);
+            reciclerView.setVisibility(View.INVISIBLE);
+        }else{
+            textNotData.setVisibility(View.INVISIBLE);
+            reciclerView.setVisibility(View.VISIBLE);
+        }
     }
 
 
